@@ -1,0 +1,42 @@
+/* Coolors Exported Palette - coolors.co/323031-3d3b3c-7f7979-d1a7d0-4c467f */
+/* HSL */
+/* RGB */
+:root {
+  background: #4c467f;
+  color: #f3f2f2;
+  font-family: Montserrat, sans-serif;
+    font-family-height: 100vh;
+  width: 100vw; }
+
+body {
+  display: flex;
+  margin: 0;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.glyphicons img {
+  height: 64px;
+  width: 64px;
+  margin: 0 5px; }
+
+.footer {
+  align-self: flex-end;
+  margin-right: 1%; }
+
+a, a:visited {
+  text-decoration: none;
+  color: #86cb92; }
+
+a:hover, a:active {
+  text-decoration: underline;
+  color: #f3f2f2; }
+
+h1 {
+  font-size: 5em;
+  margin: 15px 0; }
+
+h2 {
+  font-weight: 200; }
+
+/*# sourceMappingURL=index.css.map */
