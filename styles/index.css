@@ -9,18 +9,8 @@
 body {
   height: 100vh;
   width: 100vw;
-  display: grid;
-  align-items: stretch;
-  grid-template: "content" 19fr "footer" 1fr/1fr;
-  margin: 0; }
-
-a, a:visited {
-  text-decoration: none;
-  color: #86cb92; }
-
-a:hover, a:active {
-  text-decoration: underline;
-  color: #f3f2f2; }
+  margin: 0;
+  z-index: 0; }
 
 h1 {
   font-size: 5em;
@@ -32,6 +22,18 @@ h2 {
   h2 span::after {
     content: " | ";
     font-size: 1.75em; }
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  align-items: stretch;
+  grid-template: "content" 19fr "footer" 1fr/1fr; }
+  .grid-container a, .grid-container a:visited {
+    text-decoration: none;
+    color: #86cb92; }
+  .grid-container a:hover, .grid-container a:active {
+    text-decoration: underline;
+    color: #f3f2f2; }
 
 .content {
   display: flex;
@@ -52,6 +54,72 @@ h2 {
   font: italic 100 0.66em Montserrat, sans-serif;
   justify-self: end;
   margin-right: 1%; }
+
+.menu-content {
+  background-color: #86cb92;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 20vw;
+  margin-left: -20vw;
+  padding-top: 40px;
+  overflow: auto;
+  transition: 0.25s;
+  z-index: 10; }
+  .menu-content a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #f3f2f2;
+    margin: 10px 0; }
+  .menu-content a:visited {
+    text-decoration: none;
+    color: #4c467f; }
+  .menu-content a:hover, .menu-content a:active {
+    text-decoration: underline;
+    color: #f3f2f2; }
+
+.menu-show {
+  margin-left: 0;
+  box-shadow: 4px 2px 15px 1px #323031; }
+
+.hamburger-bar {
+  width: 30px;
+  height: 3px;
+  margin: 6px 1px;
+  background: #f3f2f2;
+  transition: 0.5s; }
+
+.hamburger-bar:nth-child(1).close-button {
+  transform: rotate(45deg) translate(0px, 12.5px);
+  transition: 0.5s; }
+
+.hamburger-bar:nth-child(2).close-button {
+  transition: 0.1s ease-in;
+  opacity: 0; }
+
+.hamburger-bar:nth-child(3).close-button {
+  transform: rotate(-45deg) translate(0px, -13px);
+  transition: 0.5s; }
+
+.hamburger-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 32px;
+  z-index: 15;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  outline: none; }
+  .hamburger-button:hover, .hamburger-button:active {
+    cursor: pointer; }
 
 #icon-linkedin {
   margin-left: 10px; }
