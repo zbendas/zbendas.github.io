@@ -17,23 +17,6 @@ body
   grid-template: "content" 19fr "footer" 1fr / 1fr
   margin: 0
 
-.content
-  display: flex
-  flex-flow: column nowrap
-  justify-content: center
-  align-items: center
-
-.glyphicons
-  img
-    height: 64px
-    width: 64px
-    margin: 0 5px
-
-.footer
-  grid-area: footer
-  justify-self: end
-  margin-right: 1%
-
 a, a:visited
   text-decoration: none
   color: $color4
@@ -43,7 +26,39 @@ a:hover, a:active
 
 h1
   font-size: 5em
-  margin: 15px 0
+  margin: 10px 0
 
 h2
+  margin: 0 0 10px 0
   font-weight: 200
+  span::after
+    content: " | "
+    font-size: 1.75em
+
+.content
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+
+.glyphicons
+  margin-top: 5px
+  img
+    height: 64px
+    width: 64px
+    margin: 0 5px
+
+.footer
+  grid-area: footer
+  align-self: end
+  font: italic 100 0.66em $font-stack
+  justify-self: end
+  margin-right: 1%
+
+#icon-github
+
+
+#icon-linkedin
+  margin-left: 10px //Adjusts for the 10px additional space due to the (R) symbol
+
+#icon-stackoverflow
