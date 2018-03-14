@@ -7,6 +7,33 @@ html(lang="en")
     body
         include includes/menu.pug
         .grid-container
+            .header
+                h1 My Projects
             .content
-                h1 Under Construction! :)
+                .project
+                    h2.project-title 3D Pic Plot
+                    .project-image
+                        video.project-image.lazy-load(autoplay loop width="400" height="300" title="Scatterplot of Georges Seurat's \"A Sunday on La Grande Jatte\"")
+                            source(src="static/projects/videos/3DPicPlotExample.mp4")
+                    p.project-description.
+                        Inspired by #[a(href="https://www.reddit.com/r/dataisbeautiful/comments/7584no/3d_rgb_scatterplots_of_colours_used_in_famous/") this Reddit post], I wondered if I could recreate the functionality myself in Python. I was able
+                         to use a combination of OpenCV2 for Python, Numpy, and MatPlotLib to sample a variable number
+                         of random points from an image, then plot them in 3D space. The resulting plot could be
+                         obtained as a 2D image of the plot from a set angle, or could be given has a rotating animated
+                         version in .mp4 format, as seen above.
+                        Additionally, this program could be used entirely as a CLI, with its own "help" command included
+                         to provide documentation to the user.
+                    p.project-link.
+                        You can view this project on #[a(href="https://github.com/zbendas/3DPicPlot") my Github].
+                .project
+                    h2.project-title ProblemBot
+                    p.project-description.
+                        As my office was transitioning to Slack for our intra-office communication, I was intrigued by
+                         their API offerings. I identified that there was a need for a problem-management and
+                         alert-delivery system, so I set about creating one. While this interface has some major issues,
+                         it was my first foray into integrating with an API and designing a user workflow/experience.
+                         If I were to redo this project, I'd specifically look to use Slack webhook/message API instead
+                         of its real-time messaging API due to the richer feature set.
+                    p.project-link.
+                        You can view this project on #[a(href="https://github.com/zbendas/ProblemBot") my Github].
         include includes/scripts.pug

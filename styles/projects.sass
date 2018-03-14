@@ -1,1 +1,49 @@
 @import common
+
+.grid-container
+  grid-template: "header" 2fr "content" 18fr / 1fr
+
+.content
+  flex-flow: row wrap
+  align-items: flex-start
+
+.header
+  grid-area: header
+
+h1
+  text-align: center
+
+.project
+  width: 33%
+  flex-basis: 40%
+  text-align: center
+  font-weight: 200
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  margin: 2%
+  padding: 10px
+  border-radius: 5px
+  border: 2px dashed $color4
+  box-shadow: 5px 5px 5px transparentize($color1, 0.5)
+  h2.project-title
+    font-weight: normal
+  div.project-image
+    width: 400px
+    height: 300px
+    background: $color2
+    padding: 0
+    margin: 0
+    img.project-image
+      width: 400px
+      height: 300px
+      margin: 0
+    video.project-video
+      width: 400px
+      height: 300px
+      z-index: 15
+
+  .project-description
+
+  .project-link
+
