@@ -109,21 +109,26 @@ h2 {
   .hamburger-button:hover, .hamburger-button:active {
     cursor: pointer; }
 
-.glyphicons {
-  margin-top: 5px; }
-  .glyphicons img {
-    height: 64px;
-    width: 64px;
-    margin: 0 5px; }
+.grid-container {
+  grid-template: "header" 2fr "content" 18fr/1fr; }
 
-.footer {
-  grid-area: footer;
-  align-self: end;
-  font: italic 100 0.66em Montserrat, sans-serif;
-  justify-self: end;
-  margin-right: 1%; }
+.content {
+  flex-flow: row wrap;
+  align-items: start; }
 
-#icon-linkedin {
-  margin-left: 10px; }
+.header {
+  grid-area: header; }
 
-/*# sourceMappingURL=index.css.map */
+h1 {
+  flex-basis: 100%;
+  text-align: center; }
+
+.hexagon {
+  width: 300px;
+  height: 300px;
+  flex-basis: 300px; }
+  .hexagon p {
+    text-align: center;
+    margin: 5px 0; }
+
+/*# sourceMappingURL=art.css.map */

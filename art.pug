@@ -1,0 +1,19 @@
+doctype html
+include includes/hexagon-image
+html(lang="en")
+    head
+        title Zachariah Bendas - 3D Art
+        link(rel="stylesheet", type="text/css", href="styles/art.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:100i,200,400")
+    body
+        include includes/menu.pug
+        .grid-container
+            .header
+                h1 My 3D Art
+            .content
+                +hex-image('static/art/thumbs/black_lodge_600x600.png', "Black Lodge")
+                +hex-image('static/art/thumbs/bathroom_600x600.png', "Bathroom")
+                +hex-image('static/art/thumbs/foyer_600x600.png', "Foyer")
+                +hex-image('static/art/thumbs/vaporwave_600x600.png', "Vaporwave")
+                +hex-image('static/art/thumbs/laboratory_600x600.png', "Laboratory")
+        include includes/scripts.pug

@@ -1,0 +1,23 @@
+@import common
+
+.grid-container
+  grid-template: "header" 2fr "content" 18fr / 1fr
+
+.content
+  flex-flow: row wrap
+  align-items: start
+
+.header
+  grid-area: header
+
+h1
+  flex-basis: 100%
+  text-align: center
+
+.hexagon
+  width: 300px
+  height: 300px
+  flex-basis: 300px
+  p
+    text-align: center
+    margin: 5px 0

@@ -1,0 +1,13 @@
+- var $color3 = '#f3f2f2';
+
+mixin hex-image(path, picture_title)
+    - var regexName = /.*\/(.*).png$/;
+    - var pattern_id = "image-bg__" + regexName.exec(path)[1];
+    .hexagon
+        svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="100%" viewBox="-3 0 305 300" id="image-fill")
+            defs
+                pattern(id=pattern_id x="0" y="0" patternUnits="userSpaceOnUse" height="300" width="300")
+                    image(xlink:href=path width="300" height="300")
+            polygon(class="hexagon" points="300,150 225,280 75,280 0,150 75,20 225,20" fill="url('#" + pattern_id + "')" stroke=$color3 stroke-width="2")
+        .hexagon-title
+            p #{picture_title}
