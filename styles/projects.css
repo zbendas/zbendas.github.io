@@ -109,6 +109,9 @@ h2 {
   .hamburger-button:hover, .hamburger-button:active {
     cursor: pointer; }
 
+body {
+  overflow-x: hidden; }
+
 .grid-container {
   grid-template: "header" 2fr "content" 18fr/1fr; }
 
@@ -130,7 +133,7 @@ h1 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin: 2%;
+  margin: 1%;
   padding: 10px;
   border-radius: 5px;
   border: 2px dashed #86cb92;
